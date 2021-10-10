@@ -32,3 +32,11 @@ function mentalMappingTest() {
   cars.map((c) => c);
   cars.filter((carvv) => carvv);
 }
+
+function explanatoryVariablesTest(params) {
+  function misspelledunctionNameeee(params) {}
+
+  let mispelledVar = "";
+  const mispellledVar = "";
+  var misssspelledVar = "";
+}

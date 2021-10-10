@@ -4,6 +4,7 @@ const negativeConditionalsValidator = require("../rules/negativeConditionals");
 const commentsLengthValidator = require("../rules/commentsLength");
 const funcParamsValidator = require("../rules/funcParams");
 const mentalMappingValidator = require("../rules/mentalMapping");
+const explanatoryVariablesValidator = require("../rules/explanatoryVariables");
 
 function validate(data) {
   let errors = [];
@@ -21,8 +22,13 @@ function validate(data) {
   // const funcParamsValidatorErrors = funcParamsValidator.validate(dataArray);
   // if (funcParamsValidatorErrors) errors.push(funcParamsValidatorErrors);
 
-  const mentalMappingValidatorErrors = mentalMappingValidator.validate(dataArray);
-  if (mentalMappingValidatorErrors) errors.push(mentalMappingValidatorErrors);
+  // const mentalMappingValidatorErrors = mentalMappingValidator.validate(dataArray);
+  // if (mentalMappingValidatorErrors) errors.push(mentalMappingValidatorErrors);
+
+  const explanatoryVariablesValidatorErrors =
+    explanatoryVariablesValidator.validate(dataArray);
+  if (explanatoryVariablesValidatorErrors)
+    errors.push(explanatoryVariablesValidatorErrors);
 
   return errors;
 }
