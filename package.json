@@ -1,10 +1,15 @@
 {
-    "name": "clean-code-analyser",
-    "version": "1.0.0",
-    "main": "index.js",
-    "dependencies": {
-        "chalk": "^4.1.2",
-        "pluralize": "^8.0.0",
-        "spellchecker": "^3.7.1"
-    }
+  "name": "clean-code-analyser",
+  "version": "1.0.0",
+  "author": "Supun Sashika (https://github.com/supunsashika123)",
+  "main": "./index.js",
+  "bin": {
+    "cca-analyse": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "log-update": "^4.0.0",
+    "pluralize": "^8.0.0",
+    "spellchecker": "^3.7.1"
+  }
 }

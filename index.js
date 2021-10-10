@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+const CLI = require("./cli");
 const Console = require("./tools/Output.js");
 const Validator = require("./tools/Validator");
 
@@ -16,4 +19,9 @@ function app() {
   });
 }
 
-app();
+let animation = CLI.animation("Analysing your source code..");
+
+setTimeout(() => {
+  app();
+  clearInterval(animation);
+}, 2000);
