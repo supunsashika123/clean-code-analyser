@@ -1,4 +1,6 @@
-const ERROR_MESSAGE = "You should try to avoid negative if conditionals.";
+const Output = require("../tools/Output");
+
+const OUTPUT_MESSAGE = "You should try to avoid negative if conditionals.";
 
 function validate(data) {
   let errorsList = [];
@@ -19,7 +21,8 @@ function validate(data) {
     }
   }
 
-  return { message: ERROR_MESSAGE, errorsList };
+  if (errorsList.length)
+    return { message: OUTPUT_MESSAGE, type: Output.types.WARNING, errorsList };
 }
 
 module.exports = { validate };

@@ -1,5 +1,5 @@
-const Console = require("./tools/Output.js")
-const Validator = require("./tools/Validator")
+const Console = require("./tools/Output.js");
+const Validator = require("./tools/Validator");
 
 function app() {
   //Load files
@@ -9,8 +9,11 @@ function app() {
   const data = fs.readFileSync(path.resolve(__dirname + "/sample.js"), "utf8");
 
   //Validate files
-  let err = Validator.validate(data)
-  Console.error(JSON.stringify(err));
+  let responsesList = Validator.validate(data);
+
+  responsesList.forEach((response) => {
+    Console[response.type](JSON.stringify(response));
+  });
 }
 
-app()
+app();
