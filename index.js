@@ -1,4 +1,5 @@
 const Console = require("./tools/Output.js")
+const Validator = require("./tools/Validator")
 
 function app() {
   //Load files
@@ -8,10 +9,8 @@ function app() {
   const data = fs.readFileSync(path.resolve(__dirname + "/sample.js"), "utf8");
 
   //Validate files
-
-  Console.success("woah");
-  Console.warning("woah");
-  Console.error("woah");
+  let err = Validator.validate(data)
+  Console.error(JSON.stringify(err));
 }
 
 app()
