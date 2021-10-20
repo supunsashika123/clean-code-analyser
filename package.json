@@ -1,9 +1,9 @@
 {
   "name": "clean-code-analyser",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Supun Sashika (https://github.com/supunsashika123)",
   "scripts": {
-    "config":"echo '{ \"eventHandlerPrefix\":\"handle\" }' >cca.config.json",
+    "config":"echo '{ \"eventHandlerPrefix\":\"handle\" }' >../../cca.config.json",
     "cca":"node ."
   },
   "main": "./index.js",

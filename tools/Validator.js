@@ -11,25 +11,26 @@ function validate(data) {
   let errors = [];
   const dataArray = data.split(os.EOL).map((line) => line.replace(/\s/g, ""));
 
-  // const negativeConditionalsValidatorErrors =
-  //   negativeConditionalsValidator.validate(dataArray);
-  // if (negativeConditionalsValidatorErrors)
-  //   errors.push(negativeConditionalsValidatorErrors);
+  const negativeConditionalsValidatorErrors =
+    negativeConditionalsValidator.validate(dataArray);
+  if (negativeConditionalsValidatorErrors)
+    errors.push(negativeConditionalsValidatorErrors);
 
-  // const commentsLengthValidatorErrors =
-  //   commentsLengthValidator.validate(dataArray);
-  // if (commentsLengthValidatorErrors) errors.push(commentsLengthValidatorErrors);
+  const commentsLengthValidatorErrors =
+    commentsLengthValidator.validate(dataArray);
+  if (commentsLengthValidatorErrors) errors.push(commentsLengthValidatorErrors);
 
-  // const funcParamsValidatorErrors = funcParamsValidator.validate(dataArray);
-  // if (funcParamsValidatorErrors) errors.push(funcParamsValidatorErrors);
+  const funcParamsValidatorErrors = funcParamsValidator.validate(dataArray);
+  if (funcParamsValidatorErrors) errors.push(funcParamsValidatorErrors);
 
-  // const mentalMappingValidatorErrors = mentalMappingValidator.validate(dataArray);
-  // if (mentalMappingValidatorErrors) errors.push(mentalMappingValidatorErrors);
+  const mentalMappingValidatorErrors =
+    mentalMappingValidator.validate(dataArray);
+  if (mentalMappingValidatorErrors) errors.push(mentalMappingValidatorErrors);
 
-  // const explanatoryVariablesValidatorErrors =
-  //   explanatoryVariablesValidator.validate(dataArray);
-  // if (explanatoryVariablesValidatorErrors)
-  //   errors.push(explanatoryVariablesValidatorErrors);
+  const explanatoryVariablesValidatorErrors =
+    explanatoryVariablesValidator.validate(dataArray);
+  if (explanatoryVariablesValidatorErrors)
+    errors.push(explanatoryVariablesValidatorErrors);
 
   const funcNamesValidatorErrors = funcNamesValidator.validate(dataArray);
   if (funcNamesValidatorErrors) errors.push(funcNamesValidatorErrors);
