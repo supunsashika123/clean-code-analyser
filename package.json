@@ -1,13 +1,15 @@
 {
   "name": "clean-code-analyser",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "author": "Supun Sashika (https://github.com/supunsashika123)",
-  "main": "./index.js",
-  "bin": {
-    "cca-analyse": "./index.js"
+  "scripts": {
+    "config":"echo '{ \"eventHandlerPrefix\":\"handle\" }' >cca.config.json",
+    "cca":"node ."
   },
+  "main": "./index.js",
   "dependencies": {
     "chalk": "^4.1.2",
+    "glob": "^7.2.0",
     "log-update": "^4.0.0",
     "pluralize": "^8.0.0",
     "spellchecker": "^3.7.1"

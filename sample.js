@@ -40,3 +40,33 @@ function explanatoryVariablesTest(params) {
   const mispellledVar = "";
   var misssspelledVar = "";
 }
+
+function eventHandlerFunctionsTest() {
+  const handleButtonClick = () => {};
+  
+  const clickedFunction = () => {};
+
+  if (1) {
+    return (
+      <div>
+        <button onClick={clickedFunction}></button>
+      </div>
+    );
+  }
+
+  if (2) {
+    return (
+      <div>
+        <button onClick={handleButtonClick}></button>
+      </div>
+    );
+  }
+
+  if (3) {
+    return (
+      <div>
+        <button onClick={()=>clickedFunction()}></button>
+      </div>
+    );
+  }
+}
